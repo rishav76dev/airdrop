@@ -4,6 +4,7 @@ import wallet from "./dev-wallet.json";
 
 const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
 const connection = new Connection("https://api.devnet.solana.com");
+console.log("Public Key:", keypair.publicKey.toBase58());
 
 
 (async () => {
@@ -14,3 +15,5 @@ const connection = new Connection("https://api.devnet.solana.com");
     console.error(`Oops, something went wrong: ${e}`)
     }
 })();
+
+//7bb78321eb7294ae28438811b980f0a0732ed80dff38f05a5a1332709fccff87
